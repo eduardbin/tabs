@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+@import "normalize";
+@import "layout";
+@import "elements";
+
+body {
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+  font: 400 14px/1.57 Lato, sans-serif;
+}
+
+/* Layout */
+.ba-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 640px;
+}
+
+.ba-nav {
+  margin-top: 146px;
+  padding-top: 32px;
+  background-color: #2b3040;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
+}
+
+.ba-nav__item {
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #b7bacd;
+    font-size: 16px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    transition: all 0.2s;
+
+    svg {
+      margin-bottom: 13px;
+      fill: #b7bacd;
+      opacity: 0.7;
+    }
+
+    span {
+      margin-bottom: 35px;
+    }
+
+    &:hover,
+    &:focus {
+      color: #fbfbfb;
+      opacity: 1;
+      border-bottom: 2px solid #fff;
+      outline: none;
+
+      svg {
+        fill: #fff;
+        opacity: 1;
+      }
+    }
+  }
+}
