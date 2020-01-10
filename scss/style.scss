@@ -60,6 +60,16 @@ body {
     span {
       margin-bottom: 35px;
     }
+
+    &:hover {
+      color: #fbfbfb;
+      opacity: 1;
+
+      svg {
+        fill: #fff;
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -68,7 +78,6 @@ body {
     color: #fbfbfb;
     opacity: 1;
     border-bottom: 2px solid #fff;
-    outline: none;
 
     svg {
       fill: #fff;

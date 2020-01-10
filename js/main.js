@@ -1,23 +1,28 @@
 ; (function () {
 	"use strict";
-	//tab secrions
+	//tab sections
 	let tabItems = document.querySelectorAll('.tab-item');
 	let tabSections = document.querySelectorAll('.ba-section');
 
 	for (let tabItem of tabItems) {
 		tabItem.addEventListener('click', (event) => event.preventDefault());
-		tabItem.addEventListener('click', getSelectedSection);
+		tabItem.addEventListener('click', tabSection);
 	};
 
-	function getSelectedSection() {
-		let itemId = this.hash;
-		let section = document.querySelector(`${itemId}`);
+	function tabSection() {
+		let clickedItem = this;
 
-		hideSections();
+		let section = getSelectedSection(clickedItem);
+		hideAllSections();
 		showSelectedSection(section);
 	};
 
-	function hideSections() {
+	function getSelectedSection(clickedItem) {
+		let itemId = clickedItem.hash;
+		return document.querySelector(`${itemId}`);
+	};
+
+	function hideAllSections() {
 		for (let tabSection of tabSections) {
 			tabSection.hidden = true;
 		};
@@ -31,13 +36,14 @@
 	let navItems = document.querySelectorAll('.ba-nav__item');
 
 	for (let navItem of navItems) {
-		navItem.addEventListener('click', addActiveClass);
+		navItem.addEventListener('click', activeItem);
 	};
 
-	function addActiveClass() {
-		removeAllActiveClasses();
+	function activeItem() {
+		let clickedItem = this;
 
-		this.classList.add('active');
+		removeAllActiveClasses();
+		addActiveClass(clickedItem);
 	};
 
 	function removeAllActiveClasses() {
@@ -46,9 +52,7 @@
 		};
 	};
 
-	//set first section active
-	window.addEventListener('load', () => {
-		tabItems[0].click();
-	});
+	function addActiveClass(clickedItem) {
+		clickedItem.classList.add('active');
+	};
 })();
-
