@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Start</title>
+	<title>Tabs</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,10 +14,11 @@
 </head>
 
 <body>
+
 	<div class="ba-container">
 		<nav class="ba-nav">
 			<ul>
-				<li class="ba-nav__item">
+				<li class="ba-nav__item active">
 					<a class="tab-item" href="#info">
 						<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -28,6 +29,7 @@
 						<span>Information</span>
 					</a>
 				</li>
+
 				<li class="ba-nav__item">
 					<a class="tab-item" href="#rating">
 						<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -39,6 +41,7 @@
 						<span>Ratings info</span>
 					</a class="tab-item">
 				</li>
+
 				<li class="ba-nav__item">
 					<a class="tab-item" href="#buy">
 						<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -53,11 +56,130 @@
 			</ul>
 		</nav>
 
-		<div class="test" id="info" style="height: 100px; background-color: #fff;"></div>
-		<div class="test" id="rating" style="height: 100px; background-color: red;"></div>
-		<div class="test" id="buy" style="height: 100px; background-color: yellow;"></div>
+		<section class="ba-section" id="info">
+			<div class="ba-info-bar">
+				<aside class="ba-info__aside">
+					<div class="ba-poster">
+						<img src="img/info/far-cry-img.jpg" alt="Far Cry 4">
+					</div>
+
+					<div class="ba-star-bar">
+						<svg class="ba-star--shining" width="20" height="19">
+							<use xlink:href="#svgStar"></use>
+						</svg>
+
+						<svg class="ba-star--shining" width="20" height="19">
+							<use xlink:href="#svgStar"></use>
+						</svg>
+
+						<svg class="ba-star--shining" width="20" height="19">
+							<use xlink:href="#svgStar"></use>
+						</svg>
+
+						<svg class="ba-star--shining" width="20" height="19">
+							<use xlink:href="#svgStar"></use>
+						</svg>
+
+						<svg class="ba-star" width="20" height="19">
+							<use xlink:href="#svgStar"></use>
+						</svg>
+					</div>
+				</aside>
+				<!-- /.ba-info__aside -->
+
+				<article class="ba-game-article">
+					<header class="ba-info-header">
+						<div class="ba-game">
+							<h1 class="ba-game__name">
+								FarCry 4
+							</h1>
+							<!-- /.ba-gane-name -->
+
+							<p class="ba-game__subscribe">
+								First Released Nov 17, 2014
+							</p>
+							<!-- /.ba-game__subscribe -->
+						</div>
+						<!-- /.ba-game -->
+
+						<div class="ba-game-rating">
+							7.8
+						</div>
+						<!-- /.ba-game-rating -->
+					</header>
+					<!-- /.ba-info-header -->
+
+					<p class="ba-game-artcile__content">
+						In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous and wild region of the Hima
+						layas struggling under the regime of a despotic self-appointed king.
+					</p>
+					<!-- /.ba-game-artcile__content -->
+
+					<div class="ba-game__buy">
+						<div class="ba-price">
+							<div class="ba-price__supscribe">
+								20% OFF!
+							</div>
+							<!-- /.ba-supscribe -->
+
+							<p>$59.96</p>
+						</div>
+						<!-- /.ba-price -->
+
+						<form action="#" id="formBuy">
+							<input type="hidden" name="farCry4" value="1">
+							<button class="ba-button">BUY IT NOW</button>
+						</form>
+						<!-- /#buy -->
+					</div>
+					<!-- /.ba-game__buy -->
+				</article>
+				<!-- /.ba-game-article -->
+			</div>
+			<!-- /.ba-info-bar -->
+		</section>
+		<!-- /.ba-section -->
+
+		<section class="ba-section" id="rating">
+			<h1>Rating Summary</h1>
+
+			<p>This is a first-person shooter in which players assume the role of a man (Ajay Ghale) returning to his
+				ancestral home to spread his mother's ashes. Players engage in a variety of frenetic combat missions and use
+				machine guns, pistols, shotguns, knives, and explosives to kill enemy fighters amid mountainous
+				environments. Players can also perform stealth attacks (i.e., sneaking up on enemies and slitting
+				throats/stabbing chests). Battles are highlighted by screams of pain, realistic gunfire, and large
+				blood-splatter effects. Some levels/cutscenes depict further violence: characters tortured via
+				electrocution, stabbed repeatedly in the neck, executed with bladed weapons. The game includes some
+				sexual/suggestive material, including dialogue referencing sexual activity (e.g., The army forces us to take
+				drugs and then gives us more if we do sex for wealthy men; Some of the people in my village, the army forced
+				them to become prostitutes; I think sex is fun; [I] was with this girl and she was into some crazy S&M. .
+				.). In one battle sequence, a man's genitals are briefly exposed while falling/being attacked. During the
+				course of the game, two characters are depicted smoking marijuana; players' character also consumes the
+				drug, resulting in blurred-screen effects and occasional hallucinations. The words f**k, sh*t, and a*shole
+				appear in the dialogue.</p>
+		</section>
+		<!-- /.ba-section -->
+
+		<section class="ba-section" id="buy">
+			<img src="img/buy/bg.jpg" alt="where to buy" class="buy-img">
+		</section>
+		<!-- /.ba-section -->
 	</div>
 	<!-- /.ba-container -->
+
+	<svg class="ba-sprite" xmlns="http://www.w3.org/2000/svg">
+		<symbol viewBox="0 0 20 19" id="svgStar">
+			<g>
+				<g>
+					<path
+						d="M5.335 18.302l4.715-2.235s2.943 1.38 4.815 2.26c-.607-.285 1.566 1.24 1.365-.876l-.5-5.306 3.487-3.884c-.56.623 1.54-1.08-.415-1.448-1.977-.373-5.52-.634-5.52-.634s-1.409-3.255-2.45-5.055c.485.838-.548-1.85-1.586-.04-1.032 1.801-2.544 5.11-2.544 5.11s-3.436.267-5.414.646c.775-.148-1.81-.08-.497 1.375l3.57 3.953-.484 5.319c.048-.526-.676 1.826 1.458.815z" />
+					<path
+						d="M5.335 18.302l4.715-2.235s2.943 1.38 4.815 2.26c-.607-.285 1.566 1.24 1.365-.876l-.5-5.306 3.487-3.884c-.56.623 1.54-1.08-.415-1.448-1.977-.373-5.52-.634-5.52-.634s-1.409-3.255-2.45-5.055c.485.838-.548-1.85-1.586-.04-1.032 1.801-2.544 5.11-2.544 5.11s-3.436.267-5.414.646c.775-.148-1.81-.08-.497 1.375l3.57 3.953-.484 5.319c.048-.526-.676 1.826 1.458.815z" />
+				</g>
+			</g>
+		</symbol>
+	</svg>
+
 	<script src="js/main.js"></script>
 </body>
 
